@@ -3,8 +3,10 @@ local M = {}
 -- Define the function to read text from a file
 local function get_content()
     return [[
-=== Split Panes ===
+=== Scroll ===
+CTRL + [fbdu]
 
+=== Split Panes ===
 Navigate: CTRL + w [hjkl]
 Split: CTRL + w [vs]
 Width: CTRL + w [<>]
@@ -52,10 +54,11 @@ function M.show_popup()
 end
 
 -- Command registration
-vim.api.nvim_create_user_command('ShowPopup', M.show_popup, {})
+vim.api.nvim_create_user_command('CheatSheet', M.show_popup, {})
 
 -- Default shortcut to open the popup
-vim.api.nvim_set_keymap('n', '<Leader>t', ':ShowPopup<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>c', ':CheatSheet<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'g?', ':CheatSheet<CR>', { noremap = true, silent = true })
 
 return M
 
