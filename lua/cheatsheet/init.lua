@@ -3,14 +3,29 @@ local M = {}
 -- Define the function to read text from a file
 local function get_content()
     return [[
-=== Scroll ===
-CTRL + [fbdu]
+== Movement to letter ==
+    f [letter] - Move to letter 
+    t [letter] - Move up to letter 
+    ct [letter] - Change until letter
 
-=== Split Panes ===
-Navigate: CTRL + w [hjkl]
-Split: CTRL + w [vs]
-Width: CTRL + w [<>]
-Height: CTRL + w [+-=]
+== Spell check ==
+    :set spell – Turn on spell checking
+    :set nospell – Turn off spell checking
+    ]s – Jump to the next misspelled word
+    [s – Jump to the previous misspelled word
+    z= – Bring up the suggested replacements
+    zg – Good word: Add the word under the cursor to the dictionary
+    zw – Woops! Undo and remove the word from the dictionary
+
+== Movement ==
+    CTRL + [fbdu] - Fast scroll
+    g [jk] - Move in wrapped text
+
+== Split Panes ==
+    CTRL + w [hjkl] - Navigate    
+    CTRL + w [vs] - Split    
+    CTRL + w [<>] - Chhange Width
+    CTRL + w [+-=] - Change Height
 ]]
 end
 
